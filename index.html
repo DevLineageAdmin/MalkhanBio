@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -9,55 +8,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/9eee9e7e5d.js" crossorigin="anonymous"></script>
+
 </head>
 <style>
-    body {
-	width: 100wh;
-	height: 90vh;
-	color: #fff;
+   body {
 	background: linear-gradient(-45deg, #f4b700,#513d00, #cb9900, rgb(191, 191, 57), #e0a800, yellow, #513d00);
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
+	animation: gradient 6s ease infinite;
+	height: 100%;
 }
-
-@-webkit-keyframes Gradient {
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+@keyframes gradient {
 	0% {
-		background-position: 0% 50%
+		background-position: 0% 50%;
 	}
 	50% {
-		background-position: 100% 50%
+		background-position: 100% 50%;
 	}
 	100% {
-		background-position: 0% 50%
+		background-position: 0% 50%;
 	}
+}
+nav{
+  position: fixed;
+  width: 60px;
+  margin-top: 10px;
+  transition: all 0.3s linear;
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
 }
 
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+nav ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+nav li{
+  height: 45px;
+  position:relative;
+}
+nav li a{
+  color: #fff !important;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 45px;
+  padding-left:25%;
+  border-bottom: 1px solid rgba(0,0,0,.4);
+  transition: all .3s linear;
+  text-decoration: none !important;
+}
+nav li:nth-child(1) a{
+  background: #4267B2;
 }
 
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+nav li:nth-child(2) a{
+  background: #E1306C;
 }
+
+nav li:nth-child(3) a{
+  background: #333;
+}
+
+nav li a i{
+      position: absolute;
+    top: 14px;
+    left: 24px;
+    font-size: 15px;
+}
+ul li a span{
+  display: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+a:hover {
+  z-index:1;
+  width: 200px;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+}
+ul li:hover a span{
+  padding-left: 30%;
+  display: block;
+  font-size: 15px;
+}
+
 
 h1,
 h6 {
@@ -91,22 +134,27 @@ h6 {
 	100% { transform:translate(0,0) }
   }
 
-  .backdrop {
+  /* .backdrop {
 	  -moz-box-shadow: 0px 6px 5px #111; 
 	  -webkit-box-shadow: 0px 6px 5px #111; 
 	  box-shadow: 0px 2px 10px #111; 
 	  -moz-border-radius:190px; 
 	  -webkit-border-radius:190px; 
 	  border-radius:190px;
-  }
+  } */
 
   .linktree {
-	  width: 120px;
+	  width: 128px;
+      margin-left:20px;
 	  height: 120px;
 	  background-image: url("mfglogo.png");
 	  background-size: cover;
 	  background-repeat: no-repeat;
 	  background-position: 50% 50%;
+      margin-right: 0px;
+      box-shadow: 0px 2px 10px #111;
+      border: none;
+      border-radius: 500px;
   }
   .profile {
   text-align: center;
@@ -125,113 +173,23 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2vh;
 }
-.footer {
-   position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: yellow;
-   color: black;
-   text-align: center;
-   margin-top: 16vh ;
-}
 
-.fa {
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px 20px;
-  border-radius: 50%;
-}
-.fa:hover {
-    opacity: 0.7;
-    text-decoration: none;
-    color:#fff;
-}
-.fa-globe {
-  background: #2c4762;
-  color: white;
-}
 
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-/* Bob animation */
-@-webkit-keyframes hvr-bob {
-  0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-  50% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-  }
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-@keyframes hvr-bob {
-  0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-  50% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-  }
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-@-webkit-keyframes hvr-bob-float {
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-@keyframes hvr-bob-float {
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-.hvr-bob {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
-  -webkit-animation-name: hvr-bob-float, hvr-bob;
-  animation-name: hvr-bob-float, hvr-bob;
-  -webkit-animation-duration: .3s, 1.5s;
-  animation-duration: .3s, 1.5s;
-  -webkit-animation-delay: 0s, .3s;
-  animation-delay: 0s, .3s;
-  -webkit-animation-timing-function: ease-out, ease-in-out;
-  animation-timing-function: ease-out, ease-in-out;
-  -webkit-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-direction: normal, alternate;
-  animation-direction: normal, alternate;
-}
 
 
     </style>
 </style>
 <body>
-        
+    <nav>
+        <ul>
+          <li><a href="https://www.facebook.com/malkhan.fitness/"><i class="fa fa-facebook-f"></i><span>Facebook</span></a></li>
+   
+          <li><a href="https://www.instagram.com/malkhanfitness"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+
+
+          <li><a href="http://malkhanfitness.com"><i class="fa fa-globe"></i><span>Website</span></a></li>
+        </ul>
+      </nav>     
     <div class="container">
     <div class="col-xs-12">
             <div class="text-center" style="padding-top: 30px; padding-bottom: 30px;">
@@ -247,41 +205,35 @@ h6 {
 
 
     <div class="container">
-    <div class="col-xs-12">
+    
             <div class="text-center">
                 <div style="padding-bottom: 30px;">
-                    <button onclick="location.href='https://pages.razorpay.com/IBP1'" type="button" class="btn btn-outline-light shake" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 800; box-shadow: 10px 10px yellow;">KICKSTARTER PROGRAM</button>
+                    <button onclick="location.href='https://pages.razorpay.com/IBP1'" target="_blank" type="button" class="btn btn-outline-light shake " style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 800; box-shadow: 10px 10px yellow;"><i class="fa-solid fa-rocket"></i>&nbsp; KICKSTARTER PROGRAM</button>
                 </div>
                 <div style="padding-bottom: 30px;">
-                    <button onclick="location.href='#'" type="button" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600; box-shadow: 10px 10px yellow;">GYM MEMBERSHIP</button>
+                    <button onclick="location.href='#'" type="button" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600; box-shadow: 10px 10px yellow;"><i class="fa-solid fa-id-card-clip"></i>&nbsp; GYM MEMBERSHIP</button>
                 </div>
                 <div style="padding-bottom: 30px;">
-                    <button onclick="location.href='#'" type="button" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600; box-shadow: 10px 10px yellow;">WEIGHT LOSS PROGRAM</button>
+                    <button onclick="location.href='#'" type="button" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600; box-shadow: 10px 10px yellow;"><i class="fa-solid fa-dumbbell"></i>&nbsp; WEIGHT LOSS PROGRAM</button>
                 </div>
                 <div style="padding-bottom: 30px;">
-                    <button onclick="location.href='https://www.google.com/search?q=Malkhan+Fitness&oq=mal&aqs=chrome.0.69i59l2j69i57j46i131i433i512j69i60j69i61j69i60j69i61.1568j0j7&sourceid=chrome&ie=UTF-8#lrd=0x398535bfa6d8b2c3:0xadda53b213d90394,1,,,'" type="button" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600; box-shadow: 10px 10px yellow;">REVIEWS</button>
+                    <button onclick="location.href='https://www.google.com/search?q=Malkhan+Fitness&oq=mal&aqs=chrome.0.69i59l2j69i57j46i131i433i512j69i60j69i61j69i60j69i61.1568j0j7&sourceid=chrome&ie=UTF-8#lrd=0x398535bfa6d8b2c3:0xadda53b213d90394,1,,,'" type="button" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600; box-shadow: 10px 10px yellow;"><i class="fa-solid fa-person-circle-check"></i>&nbsp; REVIEWS</button>
                 </div>
                 <div style="padding-bottom: 30px;">
-             
-                  <button onclick="location.href='tel:+91 9792934169'" type="button" class="  btn btn-outline-light " style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600; box-shadow: 10px 10px yellow;"><i class="fa fa-mobile "  aria-hidden="true" ></i>CALL NOW </button>
-                </div>
+                    <button onclick="location.href='tel:+91 9792934169'" type="button" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600; box-shadow: 10px 10px yellow;"><i class="fa-solid fa-phone"></i>&nbsp; CALL NOW</button>
+                
                 
             </div>
     </div>
+    <!-- <div class="text-center mb-5">
+        <a href="#" style="color: #34312f;">JOIN US</a>
+    </div> -->
+
+    
+    
     </div>
 
-        <!-- <div class="text-center">
-            <a href="#" style="color: #34312f;">JOIN US</a>
-        </div> -->
-
-        
-        <footer class="footer">
-            <a href="https://www.facebook.com/malkhan.fitness/?ref=py_c" class="fa fa-facebook hvr-bob"></a>
-          
-            <a href="https://www.instagram.com/malkhanfitness/?hl=en" class="fa fa-instagram hvr-bob"></a>
-            
-            <a href="http://malkhanfitness.com" class="fa fa-globe hvr-bob"></a>
-        </footer>
+    
     
 </body>
 
