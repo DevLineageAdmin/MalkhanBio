@@ -143,24 +143,29 @@ h6 {
 	  border-radius:190px;
   } */
 
-  .linktree {
-	  width: 131px;
-      margin-left:21px;
-	  height: 122px;
-	  background-image: url("mfglogo.png");
-	  background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: 3.8px;
-    background-position-y: 2px ;
-      margin-right: 0px;
-      box-shadow: 5px 2px 10px #111;
-      border: none;
-      border-radius: 500px;
-  }
+  .logo{
+   width: 18%;
+ }
+ @media (max-width: 520px) {
+    .logo {
+      width:50% } }
+      @media (width: 540px) {
+    .logo {
+      width:30% } }
+      
+      @media (min-width: 620px) {
+    .logo {
+      width:30% } }
+      @media (width: 1024px) {
+    .logo {
+      width:20% } }
+      @media (width: 1280px) {
+    .logo {
+      width:20% } }
   .profile {
   text-align: center;
   color: #FFF;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 .profile_name {
   font-weight: bold;
@@ -255,17 +260,19 @@ h6 {
         </ul>
       </nav>     
     <div class="container">
-    <div class="col-xs-12">
+    
             <div class="text-center" style="padding-top: 30px; padding-bottom: 30px;">
-                <img class="backdrop linktree">
+                <img class="logo" src="/mfglogo.png">
                 <div class="profile">
                     
                     <span class="profile_name">MALKHAN FITNESS</span>
                     <span class="at">@malkhanfitness</span>
                   </div>
-            </div>
+            
     </div>
     </div>
+
+
 
 
     <div class="container">
